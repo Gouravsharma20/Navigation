@@ -13,9 +13,11 @@ import androidx.navigation.NavHost
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import wu.tutorials.navigations.ui.theme.Dobara
 import wu.tutorials.navigations.ui.theme.NavigationsTheme
 import wu.tutorials.navigations.ui.theme.HomeScreen
 import wu.tutorials.navigations.ui.theme.MenuListScreen
+import wu.tutorials.navigations.ui.theme.Next
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +37,13 @@ fun MyNavigation() {
             HomeScreen(navController)
         }
         composable(MenuList.route) {
-            MenuListScreen()
+            MenuListScreen(navController)
+        }
+        composable(Next.route) {
+            Next(navController)
+        }
+        composable(Dobara.route) {
+            Dobara()
         }
     }
     

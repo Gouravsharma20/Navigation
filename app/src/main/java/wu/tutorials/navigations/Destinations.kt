@@ -9,3 +9,9 @@ object Home:Destinations{
 object MenuList:Destinations{
     override val route ="MenuList"
 }
+object Next:Destinations{
+    override val route = "Next"
+}
+object Dobara:Destinations{
+    override val route = "Dobara"
+}

@@ -10,14 +10,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import wu.tutorials.navigations.Next
 
 @Composable
-fun MenuListScreen() {
-    Column (modifier = Modifier.fillMaxSize().padding(bottom = 150.dp), horizontalAlignment = Alignment.CenterHorizontally
+fun MenuListScreen(navController: NavController) {
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .padding(bottom = 150.dp), horizontalAlignment = Alignment.CenterHorizontally
         , verticalArrangement = Arrangement.Bottom){
         Text(text = "aalu")
-        Button(onClick = { /*TODO*/ }) {
-            Text(text = "NEXT-1")
+        Button(onClick = {navController.navigate(Next.route)}) {
+            Text(text = "Next-1")
 
         }
 
